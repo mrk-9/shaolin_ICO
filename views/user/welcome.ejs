@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/sb-admin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="css/plugins/morris.css" rel="stylesheet">
+        <link href="/styles/selector.css" rel="stylesheet">
+        <link href="/styles/custom.css" rel="stylesheet">
+        <link href="/styles/welcome.css" rel="stylesheet">
+    <body>
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top ctrl-top-nav" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand" href="index.html">Shaolin wallet</a> -->
+                </div>
+
+                <!-- dropdown for multi-languages -->
+                <div class="col-xs-6 col-sm-2 cls-multi-langs">
+                    <a class="btn btn-warning btn-select">
+                        <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                        <span class="btn-select-value">English</span>
+                        <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                        <ul>
+                            <li>English</li>
+                            <li>Russian</li>
+                            <li class="selected">Spain</li>
+                            <li>China</li>
+                        </ul>
+                    </a>
+                </div>
+
+                <!-- Total balance on top-nav -->
+                <div class="balance-top-nav">
+                    <p class="label-total-balance"> Total balance:</p>
+                    0 SHAOLIN
+                </div>
+
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-right top-nav top-nav-hover-custom">
+                    <li class="dropdown" style="position:fixed; right: 135px; top:20px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu alert-dropdown">
+                            <li>
+                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">View All</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" style="position:fixed; right: 10px; top: 20px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> marijin0805 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="hover-custom nav navbar-nav side-nav right-nav">
+                        <li>
+                            <a class="cls-walletlogo" href="/welcome">
+                                <img src="img/walletlogo.png" width="230" alt="shaolin">
+                            </a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="javascript:void(0)"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/transactions"><i class="fa fa-fw fa-bar-chart-o"></i> Transactions History</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/receive-address"><i class="fa fa-fw fa-edit"></i> Account Address</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/transactions-send"><i class="fa fa-fw fa-desktop"></i> Send</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/logout"><i class="fa fa-fw fa-wrench"></i> Log out</a>
+                        </li>
+
+                        <div class="in_sidebar_bt">
+                                <a target="_blank" href="/welcome">
+                                    <button class="btn-dark">FAQ</button>
+                                </a>
+                            </div>
+                            <div class="in_sidebar_bt_links">
+                                <a href="/welcome" target="_blank">Terms</a>
+                                <a href="/welcome" target="_blank">Blog</a>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="page-wrapper" class="cls-page-wrapper custom-page-wrapper">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                SHAOLIN <small>Secured Handling of Assets Online In-Network</small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li class="active">
+                                    <i class="fa fa-dashboard"></i> Dashboard
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="alert alert-info alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <i class="fa fa-info-circle" style="font-size: 20px"></i>
+                                <span style="font-size:20px; font-weight: bold;">The ICO is over!</span>
+                                <p style="margin-top: 10px; font-size: 15px;">Now we will need to audit the funds and apply for licenses. To ensure high capital, high SHAOLIN token price and dividend return, we need to have as much verified funds as possible.<p>
+                                <p style="margin-top: 15px; font-size: 15px;">Would you be willing to verify your SHAOLIN tokens purchase and help SHAOLIN become a success, fill in our special<a href="/welcome"> form.</a></p>
+                                <p style="font-size: 15px;">Your information will be protected with strict accordance to the EU Data Protection standards.<p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Choose Payment-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Choose Payment</h3>
+                                </div>
+                                <!--body-->
+                                <div class="panel-body">
+                                    <div class="row" style="padding: 30px 80px;">
+                                        <!-- left -->
+                                        <div class="col-sm-5">
+                                            <div class="currency-wrap">
+                                                <!--BTC-->
+                                                <div class="currency-item">
+                                                    <a href="#bitcoin" class="currency-link tab-link active" data-type="bitcoin">
+                                                      <span class="currency-picwrap">
+                                                          <img src="img/btc.png" alt class="currency-pic">
+                                                      </span>
+                                                      <span class="currency-right">
+                                                          <span class="currency-title">Bitcoin</span>
+                                                          <span class="currency-exchange">1 BTC = 4652 SHAO </span>
+                                                      </span>
+                                                    </a>
+                                                </div>
+                                                <!--ETH-->
+                                                <div class="currency-item">
+                                                    <a href="#ethereum" class="currency-link tab-link" data-type="ethereum">
+                                                      <span class="currency-picwrap">
+                                                          <img src="img/eth.png" alt class="currency-pic">
+                                                      </span>
+                                                      <span class="currency-right">
+                                                          <span class="currency-title">Ethereum</span>
+                                                          <span class="currency-exchange">1 ETH = 334 SHAO</span>
+                                                      </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- right -->
+                                        <div class="col-sm-6 currency-more">
+                                            <div class="tab-panewrap">
+                                                <!--BTC-->
+                                                <div id="bitcoin" class="tab-pane active">
+                                                    <div class="qr-box" id="qr-code-bitcoin" title="18X1nrQuXGU1v2S8qVRSiBic5Pjtm9gHVQ">
+                                                        <canvas width="280" height="280" style="display: none;"></canvas>
+                                                        <img src="img/QR_code_btc.png" style="display: block;">
+                                                    </div>
+                                                    <form class="cls-form">
+                                                        <div class="input-group">
+                                                            <span class="hint">Address</span>
+                                                            <a href="javascript;" class="btn-inputRight btn-copy btn-copy-0" data-type="bitcoin" data-clipboard-action="copy" data-clipboard-target=".source">
+                                                              <span class="copied-txt"><i class="fa fa-fw fa-check"></i>Copied</span>
+                                                              <span class="copy-txt">copy</span>
+                                                            </a>
+                                                            <div class="stretchBox">
+                                                              <div class="input">
+                                                                <span class="source">18X1nrQuXGU1v2S8qVRSiBic5Pjtm9gHVQ</span>
+                                                              </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!--ETH-->
+                                                <div id="ethereum" class="tab-pane">
+                                                    <div class="qr-box" id="qr-code-ethereum" title="0x0bb090beba7f4a09559db0874f875a6a71e81f11">
+                                                        <canvas width="280" height="280" style="display: none;"></canvas>
+                                                        <img src="img/QR_code_eth.png" style="display: block;">
+                                                    </div>
+                                                    <form class="cls-form">
+                                                        <div class="input-group">
+                                                            <span class="hint">Address</span>
+                                                            <a href="javascript:;" class="btn-inputRight btn-copy btn-copy-1" data-type="ethereum" data-clipboard-action="copy" data-clipboard-target=".source2">
+                                                              <span class="copied-txt"><i class="fa fa-fw fa-check"></i>Copied</span>
+                                                              <span class="copy-txt">copy</span>
+                                                            </a>
+                                                            <div class="stretchBox">
+                                                              <div class="input">
+                                                                <span class="source2" style="line-height: 36px;">0x0bb090beba7f4a09559db0874f875a6a71e81f11</span>
+                                                              </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Current States-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Current State</h3>
+                                </div>
+                                <!--top-->
+                                <div class="panel-body">
+                                    <div class="panel-state-high">
+                                        <div class="panel-state-high-left">
+                                            <p class="state-high-left-subtitle">Invested(total)</p>
+                                            <div class="state-high-left-content">
+                                                <p class="high-left-btc">
+                                                    <img src="img/btcicon.png" width="25px" height="25px">
+                                                    <span> </span>
+                                                    <span>8703.201170</span>
+                                                    <span> BTC</span>
+                                                </p>
+                                                <p class="high-right-eth">
+                                                    <img src="img/ethicon.png" width="25px" height="25px">
+                                                    <span></span>
+                                                    <span>32,145,60</span>
+                                                    <span> ETH</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel-state-high-right">
+                                            <p class="state-high-right-subtitle">Participants</p>
+                                            <div class="state-high-right-content">
+                                                <p class="high-right-users">
+                                                    <img src="img/usericon.png" width="20px" height="20px">
+                                                    <span> </span>
+                                                    <span>12336</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--bottom-->
+                                    <div class="panel-state-bottom">
+                                        <p class="panel-state-bottom-subtitle">Invested</p>
+                                        <div class="invested-wrapper">
+                                            <div class="invested-btc">
+                                                <img src="img/btc.png">
+                                                <p>4,131.973216</p>
+                                                <p>BTC</p>
+                                            </div>
+                                            <div class="invested-eth">
+                                                <img src="img/eth.png">
+                                                <p>131.73216</p>
+                                                <p>ETH</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Bonues-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Bonuses</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="bonus-container">
+                                        <div class="margin-box_items">
+                                            <div class="margin-box-item">
+                                                <div class="margin-box-item-in">
+                                                    <div class="margin-box-item-num">25%</div>
+                                                    <div class="margin-box-item-line" style="width:100%;"></div>
+                                                    <div class="margin-box-item-underlinenum">Day 1-2</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="margin-box-item">
+                                                <div class="margin-box-item-in">
+                                                    <div class="margin-box-item-num">20%</div>
+                                                    <div class="margin-box-item-line" style="width:100%;"></div>
+                                                    <div class="margin-box-item-underlinenum">Day 3-7</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="margin-box-item">
+                                                <div class="margin-box-item-in">
+                                                    <div class="margin-box-item-num">15%</div>
+                                                    <div class="margin-box-item-line" style="width:100%;"></div>
+                                                    <div class="margin-box-item-underlinenum">week 2</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="margin-box-item">
+                                                <div class="margin-box-item-in">
+                                                    <div class="margin-box-item-num">10%</div>
+                                                    <div class="margin-box-item-line" style="width:100%;"></div>
+                                                    <div class="margin-box-item-underlinenum">week 3</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="margin-box-item">
+                                                <div class="margin-box-item-in">
+                                                    <div class="margin-box-item-num">5%</div>
+                                                    <div class="margin-box-item-line" style="width:100%;"></div>
+                                                    <div class="margin-box-item-underlinenum">week 4</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="margin-box-item">
+                                                <div class="margin-box-item-in">
+                                                    <div class="margin-box-item-num">0%</div>
+                                                    <div class="margin-box-item-line" style="width:100%;"></div>
+                                                    <div class="margin-box-item-underlinenum">week 5</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Rates-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Rates</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="panel-body-iCO-price">
+                                        <h3 class="price-subtitle" style="font-size: 12px !important; color: #001f35 !important;">SHAOLIN price</h3>
+                                        <div class="iCO-investrates-list">
+                                            <div class="investrates-item" style="border-right: solid 1px #d5dae1; width: 35%;">
+                                                <p class="investrates-btc">
+                                                    <img src="img/btc.png">
+                                                    <span> BTC</span>
+                                                </p>
+                                                <p class="investrates-price">??</p>
+                                            </div>
+                                            <div class="investrates-item" style="width: 35%;">
+                                                <p class="investrates-eth">
+                                                    <img src="img/eth.png">
+                                                    <span> ETH</span>
+                                                </p>
+                                                <p class="investrates-price">??</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#wrapper -->
+
+        <script src="/js/dependencies/sails.io.js"></script>
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="vendor/morris/raphael.min.js"></script>
+        <script src="vendor/morris/morris.min.js"></script>
+        <script src="vendor/morris/morris-data.js"></script>
+        <!--dropdown menu-->
+        <script>
+            $(document).ready(function () {
+            $(".btn-select").each(function (e) {
+                    var value = $(this).find("ul li.selected").html();
+                    if (value != undefined) {
+                        $(this).find(".btn-select-input").val(value);
+                        $(this).find(".btn-select-value").html(value);
+                    }
+                });
+            });
+
+            $(document).on('click', '.btn-select', function (e) {
+                e.preventDefault();
+                var ul = $(this).find("ul");
+                if ($(this).hasClass("active")) {
+                    if (ul.find("li").is(e.target)) {
+                        var target = $(e.target);
+                        target.addClass("selected").siblings().removeClass("selected");
+                        var value = target.html();
+                        $(this).find(".btn-select-input").val(value);
+                        $(this).find(".btn-select-value").html(value);
+                    }
+                    ul.hide();
+                    $(this).removeClass("active");
+                }
+                else {
+                    $('.btn-select').not(this).each(function () {
+                        $(this).removeClass("active").find("ul").hide();
+                    });
+                    ul.slideDown(300);
+                    $(this).addClass("active");
+                }
+            });
+
+            $(document).on('click', function (e) {
+                var target = $(e.target).closest(".btn-select");
+                if (!target.length) {
+                    $(".btn-select").removeClass("active").find("ul").hide();
+                }
+            });
+
+            //Active control in Choose Payment
+            $(document).on('click', '.currency-link', function (e) {
+              e.preventDefault();
+              $('.currency-link').removeClass('active');
+              $('.btn-copy').removeClass('copied');
+              $(this).addClass('active');
+              var id = $(this).attr("href");
+              $(".tab-pane").removeClass("active");
+              $(id).addClass("active");
+            });
+            $(document).on('click', '.btn-copy', function (e) {
+              e.preventDefault();
+              $(this).addClass('copied');
+            });
+
+        </script>
+    </body>
+</html>

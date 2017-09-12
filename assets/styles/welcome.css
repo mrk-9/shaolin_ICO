@@ -1,0 +1,178 @@
+div.panel-default h3 {
+	font-size: 20px;
+	color: #31708f;
+}
+
+.currency-wrap {
+	margin-left: 120px;
+	margin-top: 100px;
+}
+
+.currency-item {
+	color: #464947;
+	position: relative;
+	margin-bottom: 5px;
+}
+
+.currency-link.active {
+	background: #e2f8f6;
+}
+
+.currency-link {
+	color: #464947;
+	display: inline-block;
+	padding: 11px 35px 11px 25px;
+	border-radius: 32px;
+}
+
+.currency-picwrap {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	vertical-align: middle;
+}
+
+.currency-pic {
+	display: block;
+	margin: 0 auto 25px;
+	max-width: 100%;
+	max-height: 100%;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+.currency-right {
+	display: inline-block;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+
+.currency-title {
+	font-size: 13px;
+	display: block;
+	opacity: 0.6;
+	text-transform: uppercase;
+}
+
+.currency-exchange {
+	display: block;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+@media (max-width: 1250px) {
+.currency-more {
+	width: 58%;
+}}
+
+.tab-pane.active {
+	display: block;
+}
+
+.tab-pane {
+	text-align: center;
+	display: none;
+}
+
+.qr-box {
+	width: 245px;
+	max-width: 70%;
+	display: inline-block;
+	padding: 3%;
+	margin: 20px 0;
+	border: 2px solid #65c3b6;
+}
+
+.qr-box img {
+	width: 100%;
+}
+
+.cls-form {
+	position: relative;
+}
+
+.cls-form .hint {
+	display: block;
+	font-size: 12px;
+	padding: 3px 0 3px 15px;
+	opacity: 0.5;
+	text-align: left;
+}
+
+@media (max-width: 1250px) {
+	.btn-inputRight {
+		min-width: 85px;
+	}
+}
+
+.btn-inputRight {
+	height: 36px;
+	line-height: 36px;
+	min-width: 100px;
+	padding: 0 18px;
+	font-size: 14px;
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	background: #aeff00;
+	color: #17525e;
+	border-radius: 0 28px 28px 0;
+	float: right;
+	z-index: 1;
+	position: relative;
+	margin-left: -2px;
+	border: none;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+.btn-copy .copied-text {
+	display: none;
+}
+
+.stretchBox {
+	display: block;
+	overflow: hidden;
+}
+
+.input-group {
+	display: inline-block;
+}
+
+.input-group .input {
+	border-radius: 28px 0 0 28px;
+}
+
+.input {
+	height: 36px;
+	line-height: 1.25;
+	width: 100%;
+	padding: 0 15px 0 25px;
+	border: 1px solid #bdbdbd;
+	color: #17525e;
+	font-size: 13px;
+	background: rgba(248, 248, 248, 0.32);
+	box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+	letter-spacing: 0.5px;
+}
+
+.input .source {
+	line-height: 36px;
+}
+
+.input span {
+	display: block;
+	overflow: hidden;
+}
+
+.btn-copy .copied-txt {
+	display: none;
+}
+
+.btn-copy.copied .copied-txt {
+	display: block;
+}
+
+.btn-copy.copied .copy-txt {
+	display: none;
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/sb-admin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="css/plugins/morris.css" rel="stylesheet">
+        <link href="/styles/selector.css" rel="stylesheet">
+        <link href="/styles/custom.css" rel="stylesheet">
+        <link href="/styles/send.css" rel="stylesheet">
+
+    <body>
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top ctrl-top-nav" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand" href="index.html">Shaolin wallet</a> -->
+                </div>
+
+                <!-- dropdown for multi-languages -->
+                <div class="col-xs-6 col-sm-2 cls-multi-langs">
+                    <a class="btn btn-warning btn-select">
+                        <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                        <span class="btn-select-value">English</span>
+                        <span class='btn-select-arrow glyphicon glyphicon-chevron-down'></span>
+                        <ul>
+                            <li>English</li>
+                            <li>Russian</li>
+                            <li class="selected">Spain</li>
+                            <li>China</li>
+                        </ul>
+                    </a>
+                </div>
+
+                <!-- Total balance on top-nav -->
+                <div class="balance-top-nav">
+                    <p class="label-total-balance"> Total balance:</p>
+                    0 SHAOLIN
+                </div>
+
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-right top-nav top-nav-hover-custom">
+                    <li class="dropdown" style="position:fixed; right: 135px; top:20px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu alert-dropdown">
+                            <li>
+                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">View All</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" style="position:fixed; right: 10px; top: 20px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> marijin0805 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="hover-custom nav navbar-nav side-nav right-nav">
+                        <li>
+                            <a class="cls-walletlogo" href="/welcome">
+                                <img src="img/walletlogo.png" width="230" alt="shaolin">
+                            </a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/welcome"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/transactions"><i class="fa fa-fw fa-bar-chart-o"></i> Transactions History</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/receive-address"><i class="fa fa-fw fa-edit"></i> Account Address</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="javascript:void(0)"><i class="fa fa-fw fa-desktop"></i> Send</a>
+                        </li>
+                        <li style="bottom: -23%; margin-bottom: 9px; left:25px;">
+                            <a href="/logout"><i class="fa fa-fw fa-wrench"></i> Log out</a>
+                        </li>
+
+                        <div class="in_sidebar_bt">
+                                <a target="_blank" href="/welcome">
+                                    <button class="btn-dark">FAQ</button>
+                                </a>
+                            </div>
+                            <div class="in_sidebar_bt_links">
+                                <a href="/welcome" target="_blank">Terms</a>
+                                <a href="/welcome" target="_blank">Blog</a>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="page-wrapper" class="cls-page-wrapper custom-page-wrapper">
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-fw fa-desktop"></i> Send
+                        </li>
+                    </ol>
+
+                    <!--send panel-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default custom-panel">
+                                <!-- header -->
+                                <div class="panel-heading custom-panel-heading">
+                                    <h3 class="panel-title custom-panel-title">Send</h3>
+                                </div>
+                                <!--body -->
+                                <div class="content-box-body">
+                                    <div class="in-content-body">
+                                        <div class="content-body-settings-box" style="width: 100%;">
+                                            <p class="attention-ptag">Attention! Make sure to only use wallets and exchanges that have officially confirmed integration of SHAO token.</p>
+                                            <p>We advise following services</p>
+                                            <p>- Wallets: MyEtherWallet;</p>
+                                            <p>- Exchanges: Livecoin, C-CEX.</p>
+
+                                            <form method="post" id="send-coin" autocomplete="off">
+                                                <input type="hidden" name="csrfmiddlewaretoken" value="3LeD0PMZZlc7TnbSTKOzcbaBLiehkzxG">
+                                                <div class="settings-box-inline-block">
+                                                    <div class="inp-inside" id="send-address">
+                                                        <label for="to">Address</label>
+                                                        <input class="inp-style" id="id-destination" name="destination" placeholder="Address" type="text">
+                                                    </div>
+                                                    <div class="inp-inside" id="send-amount">
+                                                        <label for="qty">Amount(SHAO)</label>
+                                                        <input class="inp-style" id="id-amount" name="amount" placeholder="Amount" style="width: 160px;">
+                                                    </div>
+                                                </div>
+
+                                                <div class="inp-inside" id="reference" style="display: block !important;">
+                                                    <label for="id-reference">Note (optional)</label>
+                                                    <input class="inp-style" type="text" name="reference" value>
+                                                </div>
+                                                <button type="submit" id="rotate" class="btn-uline">Send</button>
+                                            </form>
+                                        </div>
+
+                                        <div class="qr-scanning-group">
+                                            <div id="transaction-scanner"></div>
+                                        </div>
+                                        <br clear="all">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--footer-->
+                    <div class="col-md-12 col-xs-12 col-sm-12 footer-container adress-footer-con">
+                        <section class="footer">
+                            <div class="footer-copy">
+                                <p>@2017 Shaolin Trading. All right reserved</p>
+                                <div>
+                                    <span class="footer-message">Have any questions?</span>
+                                    <span class="footer-message">Please contact us at
+                                        <a class="poiner-black" href="/">support@XXX</a><br>
+                                        <span style="margin-top: 5px; display: inline-block;">The website is owned by Shaolin Trading with the company number XXX</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /#wrapper -->
+
+        <script src="/js/dependencies/sails.io.js"></script>
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="vendor/morris/raphael.min.js"></script>
+        <script src="vendor/morris/morris.min.js"></script>
+        <script src="vendor/morris/morris-data.js"></script>
+        <!--dropdown menu-->
+        <script>
+            $(document).ready(function () {
+            $(".btn-select").each(function (e) {
+                    var value = $(this).find("ul li.selected").html();
+                    if (value != undefined) {
+                        $(this).find(".btn-select-input").val(value);
+                        $(this).find(".btn-select-value").html(value);
+                    }
+                });
+            });
+
+            $(document).on('click', '.btn-select', function (e) {
+                e.preventDefault();
+                var ul = $(this).find("ul");
+                if ($(this).hasClass("active")) {
+                    if (ul.find("li").is(e.target)) {
+                        var target = $(e.target);
+                        target.addClass("selected").siblings().removeClass("selected");
+                        var value = target.html();
+                        $(this).find(".btn-select-input").val(value);
+                        $(this).find(".btn-select-value").html(value);
+                    }
+                    ul.hide();
+                    $(this).removeClass("active");
+                }
+                else {
+                    $('.btn-select').not(this).each(function () {
+                        $(this).removeClass("active").find("ul").hide();
+                    });
+                    ul.slideDown(300);
+                    $(this).addClass("active");
+                }
+            });
+
+            $(document).on('click', function (e) {
+                var target = $(e.target).closest(".btn-select");
+                if (!target.length) {
+                    $(".btn-select").removeClass("active").find("ul").hide();
+                }
+            });
+        </script>
+    </body>
+</html>
